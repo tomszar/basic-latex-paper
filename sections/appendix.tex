@@ -1,0 +1,42 @@
+\documentclass[11pt,onecolumn,letterpaper]{article}
+
+% Add booktabs for nice tables
+\usepackage{booktabs}
+% Set spacing
+\usepackage{setspace}
+\setstretch{1.5}
+\usepackage{lmodern}
+
+% Add newcommand to set up the numbering of supplementary figures and tables
+\newcommand{\beginsupplement}{%
+        \setcounter{table}{0}
+        \renewcommand{\thetable}{S\arabic{table}}%
+        \setcounter{figure}{0}
+        \renewcommand{\thefigure}{S\arabic{figure}}%
+     }
+
+\begin{document}
+
+\section{Supplementary Material}
+\label{Sec:appendix}
+
+\beginsupplement
+
+% Table S1
+\begin{table}[h]
+\centering
+\begin{tabular}{cc}
+\toprule
+Some category  & Some value \\
+\midrule
+Category 1 & 16,150 \\
+Category 2 & 17,250 \\
+Category 3 & 18,350 \\
+Category 4 & 19,450 \\
+\bottomrule
+\end{tabular}
+\caption{This is a supplementary table}
+\label{table:s1}
+\end{table}
+
+\end{document}

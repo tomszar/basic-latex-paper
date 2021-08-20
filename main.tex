@@ -1,0 +1,54 @@
+\documentclass[12pt,onecolumn,letterpaper]{article}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{tabularx}
+
+% Add line numbers
+\usepackage{lineno}
+\linenumbers
+
+% Set spacing
+\usepackage{setspace}
+\setstretch{1.5}
+
+% Latin Modern family of fonts. Very much like Computer Modern, but with many more glyphs (e.g., for characters with accents, glyphs, cedillas, etc)
+\usepackage{lmodern}
+
+% For authors and affiliations
+\usepackage{authblk}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcommand{\IBS}[1] {\footnote{Itzik: #1}}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TITLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Title Of Your Paper}
+
+\author[1]{Author 1}
+\author[2]{Author 2}
+\author[1]{Author 3}
+\affil[1]{Affiliation of Author 1}
+\affil[2]{Affiliation of Author 2}
+
+\date{}
+
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{sections/abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%The sections are saved in a subfolder /sections. Each has a separate .tex file for easy access and ordering.
+\input{sections/intro}
+\input{sections/methods}
+\input{sections/results}
+\input{sections/discussion}
+
+\begin{singlespace}
+\bibliographystyle{unsrt}
+\bibliography{references}
+\end{singlespace}
+
+%\input{sections/appendix}
+\end{document}
