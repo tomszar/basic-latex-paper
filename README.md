@@ -9,3 +9,5 @@ bash CompileArticle.sh
 
 The prompt will ask whether to compile a `.pdf` or `.docx` document.
 The figures and tables document, and the appendix are always compiled to `.pdf`
+
+Make sure to change the `outdir` variables in the `CompileArticle.sh` file
